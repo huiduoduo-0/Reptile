@@ -9,8 +9,10 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 Vue.use(ElementUI)
+Vue.prototype.$axios=axios
+axios.defaults.withCredentials=true
 Vue.config.productionTip = false
-
+axios.defaults.baseURL="http://localhost:8090"
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
